@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="testdate" type="date"/>
+    <aura:attribute name="dateValidationError" type="boolean"/>
+    <lightning:input class="{v.dateValidationError ? 'slda-has-error ':''}"
+                     type="date"
+                     label="Enter Date"
+                     name="date"
+                     value="{!v.testDate}"
+                     onchange="{!c.doAction}"
+                     />
+    <aura:if isTrue="{!v.dateValidationError}">
+             /date must be past and Future...
+    </aura:if>
+    <lightning:button variant="brand"
+                      label="submit"
+                      onclick="{!c.submit}"
+                      disabled="{!v.dateValidationError}"/>
+    
+    
+                     
+                            
+</aura:component>

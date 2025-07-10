@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Hello Conditional Rendering" icon-name="Utility:check">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Show Details" type="Checkbox" onclick={clickHandle}>
+            </lightning-input>
+            <template if:true={areDetailsVisible}>
+            <div class="slds-m-vertical_medium">
+                There are true Details
+            </div>
+        </template>
+        <template if:false={areDetailsVisible}>
+            <div class="slds-m-vertical_medium">
+                There are false Details
+            </div>
+        </template>
+        </div>
+    </lightning-card>
+</template>

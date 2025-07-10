@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Call Apex Method as function in Lwc">
+        <div class="slds-around-m_small">
+            <template for:each={results} for:item="result">
+                <div class="slds-around-m_small" key={result.Id}>
+
+<strong>{result.Name}  </strong>
+<lightning-formatted-number value={result.AnnualRevenue}
+currency-code="USD"
+currency-display-as="code"></lightning-formatted-number>
+</div>
+            </template>
+        </div>
+    </lightning-card>
+
+
+    <lightning-card title="Call Apex Method as property in Lwc">
+        <div class="slds-around-m_small">
+            <template for:each={wireGetAccounts.data} for:item="acc">
+                <div class="slds-around-m_small" key={acc.Id}>
+
+<strong>{acc.Name}  </strong>
+>
+<lightning-formatted-phone value ={acc.Phone}></lightning-formatted-phone>
+
+</div>
+
+            </template>
+            <div>from getSobjectValue-<strong>{name}</strong></div>
+        </div>
+    </lightning-card>
+    <lightning-card title="Call Apex Method Imperativly in Lwc">
+        <div class="slds-around-m_small">
+            <lightning-button variant="brand" label="Load Contacts" onclick={handleLoad}></lightning-button>
+            <template if:true={contacts}>
+            <template for:each={contacts.data} for:item="contact">
+                <p key={contact.Id}>{contact.FirstName}  {contact.LastName} </p>
+</div>
+            </template>
+        </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,20 @@
+<apex:page controller="Calculator">
+    <apex:form >
+    
+    <apex:pageBlock title="Calculations" id="calBlock">
+    
+    <apex:pageBlockSection >
+       
+      FirstNumber:  <apex:inputText value="{!fnumber}"/>
+       SecondNumber: <apex:inputText value="{!snumber}"/>
+       Result: <apex:inputText value="{!result}"/>
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton value="Sum" action="{!sum}" rerender="calBlock"/>  <!---for page is not reloading for every time so rerender --->
+            <apex:commandButton value="Sub" action="{!sub}" rerender="calBlock"/>
+            <apex:commandButton value="Multi" action="{!multi}" rerender="calBlock"/>
+        
+        </apex:pageBlockButtons>
+    </apex:pageBlock>    
+    </apex:form>
+</apex:page>

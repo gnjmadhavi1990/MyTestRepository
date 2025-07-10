@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title ="Wire Function">
+        <div class="slds-m-top_medium">
+<template if:true={accdata}>
+    <lightning-datatable key-field="Id" data={accdata} columns={columns}>
+ </lightning-datatable>
+</template>
+<template if:false={accerror}>
+    <p>fail</p>
+    {accerror}
+</template>
+
+        </div>
+        </lightning-card>
+</template>

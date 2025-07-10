@@ -1,0 +1,27 @@
+<aura:component >
+    <div>
+        Calculator Results
+    
+    </div>
+    <div>
+    
+        <ui:inputNumber label= "First Number" aura:id="fnum"/>
+    </div>
+    
+    <div>
+        
+            <ui:inputNumber label="Second Number" aura:id="snum"/>
+       
+    </div><br/>
+	<div>
+       
+            <ui:inputNumber label="Result" aura:id="Result"/>
+            
+        
+    </div><br/>
+    <div>
+    
+        <ui:button label="Click Me" press="{!c.calculator}" class="button"/>
+        
+    </div><br/>
+</aura:component>

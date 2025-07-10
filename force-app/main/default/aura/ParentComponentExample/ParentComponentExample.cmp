@@ -1,0 +1,6 @@
+<aura:component >
+<p>Calling from Parent Component
+    </p>    
+    <c:ChildComponentExample aura:id="messages"/>
+    <ui:button label="clickme" press="{!v.onClick}"/>
+</aura:component>

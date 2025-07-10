@@ -1,0 +1,17 @@
+<template>
+   
+       
+            <lightning-button variant="Brand" label="Show/Hide" onclick={handleClick}>
+
+            </lightning-button>
+            <template if:true={isVisible}>
+                <lightning-card title="Render Elements">
+                    <lightning-button label="New" slot="actions"></lightning-button>
+            <p>Component Body</p>
+            <p>Component Footer</p>
+        </lightning-card>
+        </template>
+        
+      
+  
+</template>

@@ -1,0 +1,48 @@
+<apex:page controller="FirstController">
+    <apex:form >
+        <apex:pageMessages >
+            </apex:pageMessages>
+            <apex:pageMessage severity="error" strength="2">
+                hello
+            
+            
+            </apex:pageMessage>
+        
+    <apex:pageBlock title="Custom Object Creation">
+        <apex:pageBlockSection title="Venture Information">
+            <apex:inputText value="{!venName}" label="Venture Name"/>
+            <apex:inputText value="{!venNoofFalts}" label="No of Flats"/>
+            <apex:inputText value="{!venNoofBookedFlats}" label="No of Booked Falts"/>
+            
+        
+        
+        
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Customer Information">
+            <apex:inputText value="{!cusName}" label="Customer Name"/>
+            <apex:inputText value="{!cusEmail}" label="Customer Email"/>
+            <apex:inputText value="{!cusPhone}" label="Customer Phone"/>
+            
+           
+        
+        
+        
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Agent Information">
+            <apex:inputText value="{!agentName}" label="Agent Name"/>
+            <apex:inputText value="{!agentPhone}" label="Agent Phone"/>
+            
+        
+        
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons location="Bottom">
+            <apex:commandButton action="{!saveRecord}" value="save the record"/>
+            
+           
+        
+        </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

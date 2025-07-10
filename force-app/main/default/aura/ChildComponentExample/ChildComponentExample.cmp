@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:method name="showMessage" action="{!c.Action}" access="PUBLIC">
+        <aura:attribute name="message" type="string" default=""/>
+        
+    </aura:method>
+    <diV aura:id="messages">
+    </diV>
+</aura:component>

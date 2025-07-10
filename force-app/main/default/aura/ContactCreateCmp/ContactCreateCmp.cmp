@@ -1,0 +1,31 @@
+<aura:component controller="ContactCreateClass">
+    <aura:attribute name="con" type="Contact" default="{'sobjectType':'Contact',
+                                                       'FirstName':'',
+                                                       'LastName':'',
+                                                       'Phone':''}"/>
+    <aura:attribute name="ContactId" type="string"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doAction}"/>
+    <lightning:input name="Fname" value="{!v.con.FirstName}" label="First Name"/>
+    <lightning:input name="Sname" value="{!v.con.LastName}" label="Last Name"/>
+    <lightning:input name="Phone" value="{!v.con.Phone}" label="Phone"/>
+    <lightning:button variant="brand" title="Save" label="save" onclick="{!c.doSave}"/>
+    
+    <div>Contact ID: {!v.CotactId}</div> was Created
+     <div>ContactList :{!v.contactList}</div>
+    
+    <aura:iteration items="{!v.contactList}" var="con">
+        <tr>
+            <td class="slds-p-left_xx-large" data-label="First Name" scope="row">
+            <div title="First Name">{!con.FirstName}</div></td>
+        <td class="slds-p-left_xx-large" data-label="Last Name" scope="row">
+            <div title="Last Name">{!con.LastName}</div></td>
+           <td class="slds-p-left_xx-large" dada-label="Phone" scope="row">
+               <div title="Phone">{!con.Phone}</div></td> 
+        
+        </tr>
+    
+    </aura:iteration>
+   
+    
+</aura:component>

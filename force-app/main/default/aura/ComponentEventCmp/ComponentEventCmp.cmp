@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:registerEvent name="appEvent" type="c:ComponentEvent1"/>
+    <aura:attribute name="Option" type="list" default="[
+    {'label': 'New', 'value': 'new'},
+    {'label': 'In Progress', 'value': 'inProgress'},
+    {'label': 'Finished', 'value': 'finished'},
+    ]"/>
+
+    
+    <aura:attribute name="selectedValues" type="string"/>
+    <lightning:combobox name="progress" label="status" options="{!v.Option}" value="{!v.selectedValues}" onchange="{!c.handleChange}"/>
+	
+</aura:component>

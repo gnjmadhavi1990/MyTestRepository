@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="flag" type ="boolean"/>
+    <lightning:input name = "First Name" aura:id ="First Name" label="Enter First Name"/>
+<lightning:input name = "Last Name" aura:id ="Last Name" label="Enter Last Name"/>
+  <lightning:button variant="brand" label="Submit" onclick="{!c.handleClick}" />
+   <aura:if isTrue = "{!v.flag}">
+<lightning:input name ="Full Name" aura:id = "Full Name" disabled ="true" label="Full Name" />
+    </aura:if>
+    </aura:component>

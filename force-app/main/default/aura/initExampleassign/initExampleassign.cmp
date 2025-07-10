@@ -1,0 +1,18 @@
+<aura:component controller="initApexassign" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name= "data" type="object"/>
+    <aura:attribute name="Columns" type="list"/>
+    <aura:attribute name="ParentId" type="Id"/>
+    <aura:attribute name="conObj" type="Contact" default="{'sobjectType':'Contact','LastName':'','FirstName':'','Phone':'','AccountId':''}"/>
+<aura:attribute name="accObj" type="Account" default="{'sobjectType':'Account','ParentId':''}"/>
+   <lightning:recordEditForm objectApiName="Account">
+    <lightning:inputField class="slds-m-top_medium" fieldName="ParentId" label= "Enter Parent Account" value="{!v.accObj.ParentId}" />
+        
+       
+    <lightning:button class="slds-m-top_medium" variant="brand" label="Submit" onclick="{! c.init }"/>
+<lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.Columns }"
+                hideCheckboxColumn="true"/>
+    </lightning:recordEditForm>
+</aura:component>

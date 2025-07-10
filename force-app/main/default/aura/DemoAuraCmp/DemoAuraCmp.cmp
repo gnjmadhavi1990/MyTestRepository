@@ -1,0 +1,45 @@
+<aura:component >
+    <aura:attribute name="var" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="AccountName" type="Account" default="{'sobjectType':'Account','Name':'TestAccountAura'}"/>
+    <aura:attribute name="listDemo" type="List" default="['L1','L2','L3','L3']"/>
+    <aura:attribute name="setDemo" type="Set" default="['s1','s2','s3']"/>
+    <aura:attribute name="array" type="String[]" default="['a1','a2','a3']"/>
+    <aura:attribute name="MapDemo" type="Map" default="{'a':'apple','b':'ball','c':'cat'}"/>
+    <aura:attribute name="jsObject" type="Object"/>
+    <aura:attribute name="wrapperDemo" type="DemoAuraWrapper.DemoWrapper"/>
+    <aura:attribute name="Message" type="String"/>
+     Message is: {!v.Message}
+    <br/><br/>
+    <lightning:button label="ClickMe" onclick="{!c.handleClick}"/>
+    <hr/>
+    <aura:attribute name="Message2" type="String" />
+    <br/><br/>
+    <lightning:button label="ClickMeAsWell" onclick="{!c.handleClick}"/>
+    
+    <hr/>
+    <h1>Map Value: {!v.MapDemo.c}</h1>
+    <hr/>
+    <h1> Array Value: {!v.array[2]}</h1>
+    <hr/>
+    
+    <h1>Set Values : {!v.setDemo[2]}</h1>
+    <hr/>
+    <h1>List Values : {!v.listDemo[3]}</h1>
+    <hr/>
+    <h1>Account Name:{!v.AccountName.Name}</h1>
+    <hr/>
+    <h1>Var Value: {!v.var}</h1>
+    <hr/>
+    length of List: {!v.listDemo.length}
+    <hr/>
+     length of set: {!v.setDemo.length}
+    <hr/>
+     length of Array: {!v.array.length}
+    <hr/>
+    JsObject Values : {!v.jsObject.Name} -{!v.jsObject.Email}
+    <hr/>
+    Wrapper Class Values : {!v.wrapperDemo.myString} -{!v.wrapperDemo.myInteger}
+    <hr/>
+   
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="fruits" type="string[]" default="['Apple','mango','Banana']"/>
+    <h1>List of Fruits</h1>
+    <aura:iteration items="{!v.fruits}" var="fruit">
+    <ul>
+        <li>{!fruit}
+        </li>
+        </ul></aura:iteration>
+</aura:component>

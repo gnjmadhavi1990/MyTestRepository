@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Call Method Imperatively">
+        <div class="slds-m-top_medium">
+            <lightning-input type="search" label="Enter Search Value" value= {searchkey} onchange = {handleonchange}></lightning-input>
+            <lightning-button variant="brand" label="click me" onclick={handlebutton}></lightning-button>
+            
+                <lightning-datatable 
+                                 key-field="Id"  
+                                 data={accounts} 
+                                 columns={columns}>
+                                      </lightning-datatable>
+                                        
+                   
+        </div>
+    </lightning-card>
+</template>

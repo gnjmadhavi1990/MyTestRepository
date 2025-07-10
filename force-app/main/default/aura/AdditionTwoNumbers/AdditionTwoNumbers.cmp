@@ -1,0 +1,11 @@
+<aura:component controller="CalculatorApexController" >
+    
+    <aura:attribute name="FirstNumber" type="decimal"/>
+    <aura:attribute name="SecondNumber" type="decimal"/>
+    <aura:attribute name="Result" type="decimal"/>
+    <lightning:input name= "First Number" label ="First Number" value="{!v.FirstNumber}"/>
+    <lightning:input name="Second Number" label="second Number" value="{!v.SecondNumber}"/>
+    <lightning:input name="Result" label="Result" value="{!v.Result}"/>
+    <lightning:button variant="brand" label="click me" onclick="{!c.showResult}" />
+	
+</aura:component>

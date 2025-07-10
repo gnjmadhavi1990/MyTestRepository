@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:registerEvent name="appEvent" type="c:myApplicationEvent"/>
+    <h1>Simple Application Event sample
+    </h1>
+    <lightning:button label="Click for Application Event"
+                      variant="brand"
+                      onclick="{!c.notifyApplication}"/>
+                      
+</aura:component>

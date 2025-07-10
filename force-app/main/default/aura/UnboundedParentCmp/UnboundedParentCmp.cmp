@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="ParentAttr" type="string" default="I am Parent Attribute"/>
+    <c:UnboundedChildCmp childAttr="{#v.ParentAttr}"/>
+    <h1>Parent Value: {!v.ParentAttr}</h1>
+    <br/><br/>
+    <lightning:button label="clickMe" onclick="{!c.handleClick}"/>
+</aura:component>

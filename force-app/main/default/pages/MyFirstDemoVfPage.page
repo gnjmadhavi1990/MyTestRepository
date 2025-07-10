@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:includeLightning />
+    {! Today()}
+    {!IF($User.Country ='IN', 'Namaste', 'Hello')}
+    <div id="time">
+        
+    </div>
+    <script>
+    $Lightning.Use("c.MyAuraInVfApp",function(){
+        $Lightning.createComponent("c.MyAuraInVf",{},"time",function(cmp){
+            console.log("component created");
+            });
+        });
+    </script>
+    
+</apex:page>

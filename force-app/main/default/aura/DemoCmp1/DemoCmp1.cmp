@@ -1,0 +1,29 @@
+<aura:component >
+    <aura:attribute name="Varl" type="string"/>
+    <aura:handler name= "init" value="{!this}" action ="{!c.doInit}"/>
+    <aura:attribute name="arrayDemo" type="string[]" default="['v1','v2','v3']"/>
+    <aura:attribute name="listDemo" type="List" default ="['list','list1','list2']"/>
+    <aura:attribute name="setDemo" type="set" default ="['set1','set2','set3']"/>
+    <aura:attribute name="mapDemo" type="map" default ="{a:'map1',b:'map2',c:'map3'}"/>
+    <aura:attribute name="jsObject" type="object"/>
+    <aura:attribute name="userData" type="DemoWrapperclass.WrapperTest"/>
+    
+    <h1>
+    array value: {!v.arrayDemo[1]}
+    </h1>
+    <hr/>
+    list value : {!v.listDemo[0]}, {!v.listDemo[2]} ,{!v.listDemo[1]}
+    <hr/>
+    set value : {!v.setDemo[2]} ,{!v.setDemo[0]}
+    <hr/>
+    map value :{!v.mapDemo.c},{!v.mapDemo.a}
+    <hr/>
+    length of set : {!v.setDemo.length}
+    
+    <hr/>
+     length of list :{!v.listDemo.length}
+    <hr/>
+    jsObject values :{!v.jsObject.name},{!v.jsObject.email}
+    <hr/>
+    Wrapper values : {!v.userData.mystring1}-{!v.userData.myinteger1}
+</aura:component>

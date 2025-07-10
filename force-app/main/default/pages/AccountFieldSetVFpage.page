@@ -1,0 +1,15 @@
+<apex:page controller="AccountFieldList" lightningStylesheets="true">
+    <apex:slds />
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+        <apex:repeat value="{!fieldList}" var="field">
+            <apex:inputField value="{!acc[field]}"/>
+            </apex:repeat>
+        
+        </apex:pageBlockSection>
+        <apex:commandButton value="save" action="{!saveAccount}"/>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

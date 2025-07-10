@@ -1,0 +1,12 @@
+<aura:component controller="getRecords" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name= "data" type="object"/>
+    <aura:attribute name="columns" type="list"/>
+    <aura:attribute name="limit" type="integer"/>
+    <lightning:input name="limit" type="number" label="enter limit" value="{!v.limit}"/>
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+    <lightning:button variant="brand" label="Submit" onclick="{! c.init }"/>
+</aura:component>

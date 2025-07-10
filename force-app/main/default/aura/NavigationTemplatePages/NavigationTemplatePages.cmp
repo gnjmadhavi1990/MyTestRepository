@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId"  access="global" >
+    <lightning:card title="Navigation Template">
+        <div>Record Id:{!v.recordId}
+        </div>
+    Welcome to Lightning Page
+    </lightning:card>
+	
+</aura:component>

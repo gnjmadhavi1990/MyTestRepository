@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="title" type="string"/>
+    <aura:attribute name="result" type="integer"/>
+    <aura:handler event="c:NewApplicationEvent" action="{!c.handlerEvent}"/>
+    <lightning:card>
+    <aura:set attribute="title">
+        <lightning:icon iconName="utility:connected_apps" size="small"/>
+        {!v.title}
+        </aura:set>
+        <lightning:input name="Result" value="{!v.result}" type="integer"/>
+    
+    </lightning:card>
+</aura:component>

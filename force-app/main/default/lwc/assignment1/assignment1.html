@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title ="Assignment">
+        
+        <lightning-input name = "firstname" label="First Name" class= "fname" type="string" onchange ={handlefirstname}></lightning-input>
+        <lightning-input name = "lastname" label="Last Name" class="lname" type="string" onchange={handlelastname}></lightning-input>
+<br>
+        <lightning-button variant="brand" label="Submit" onclick={displayFullname}>
+</lightning-button>
+<br/>
+<lightning-formatted-text value={fullname}></lightning-formatted-text>
+</lightning-card>
+
+</template>

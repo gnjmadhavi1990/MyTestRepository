@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="CreateContactController" >
+    <aura:attribute name="recordId" type="string"/>
+    <aura:attribute name="firstName" type="string"/>
+    <aura:attribute name="lastName" type="string"/>
+    <aura:attribute name="Phone" type="integer"/>
+    <aura:attribute name="conObj" type="contact" default="[{'sobjectType':'Contact','FirstName':'firstName','LastName':'lastName','Phone':'Phone'}]"/>
+    <lightning:input name="FirstName" value="{!v.firstName}"/>
+    <lightning:input name="LastName" value="{!v.lastName}"/>
+    <lightning:input name="phone" value="{!v.Phone}"/>
+    <lightning:button variant="brand" label="Save" onclick="{!c.handleButton}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+</aura:component>

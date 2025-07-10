@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="parentAttr" type="string" default=" I Am Parent Attribute"/>
+    <aura:handler name="Parent" value="{!v.parentAttr}" action="{!c.handlerAction}"/>
+    <c:BoundedChildCmp childAttr = "{!v.parentAttr}"/>
+   
+    <h1>Parent Value: {!v.parentAttr}</h1>
+     <lightning:button label="click me" onclick="{!c.onClick}"/>
+</aura:component>

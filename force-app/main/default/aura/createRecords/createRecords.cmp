@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="createAcc" >
+    <aura:attribute name = "accobj" type="Account" default="{'sobjecttype':'Account','Name':'','Rating':'','Phone':''}"/>
+    <lightning:recordEditForm objectApiName="Account">
+                                         
+        <lightning:inputfield fieldName ="Name" value ="{!v.accobj.Name}"/>
+        <lightning:inputField fieldName="Rating"  value = "{!v.accobj.Rating}" />
+                <lightning:inputField fieldName="Phone" value ="{!v.accobj.Phone}"/>
+                <lightning:button variant="brand" name="Submit" label="submit" class="slds-m-top_medium" onclick="{! c.handleSubmit }"/>
+            </lightning:recordEditForm>
+    
+</aura:component>

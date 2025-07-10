@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-card title="Parent Component" icon-name="custom:custom14">
+            <h1> Select ckicket player in child component see the details in parent component</h1>
+       <p>I am Parent Component</p>
+       <c-child-component-lwc nav-list={navList} onselection={selectionHandler}></c-child-component-lwc>
+        
+    <template if:true={selectedPlayer}>
+        <div>
+            <img src={selectedPlayer.imgUrl} alt="Avatar" style="width:50%"/>
+<p><strong>Player Name:</strong>{selectedPlayer.name}</p>
+<p><strong>Country:</strong>{selectedPlayer.country}</p>
+<p><strong>Ranking:</strong>{selectedPlayer.position}</p>
+<p><strong>Rating:</strong>{selectedPlayer.rating}</p>
+        </div>
+    </template></lightning-card>
+    </div>
+</template>

@@ -1,0 +1,9 @@
+<template>
+    <p>Parent Component</p>
+    <lightning-button label="show/hide" variant="brand" onclick={handleEvent}></lightning-button>
+    <template if:true={isVisible}>
+        <c-life-cycle-hook-child></c-life-cycle-hook-child>
+
+    </template>
+
+</template>

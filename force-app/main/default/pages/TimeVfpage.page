@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:includeLightning />
+    <h1>
+        Lightning Page
+    </h1>
+    <div
+        id="time">
+        
+    </div>
+    <script>
+    $Lightning.use("c:timeCmp1",function(){
+        $Lightning.createComponent("c:timeCmp",{},"time",function(cmp){
+            console.log("component created");
+        };
+                                   });
+        
+    </script>
+</apex:page>

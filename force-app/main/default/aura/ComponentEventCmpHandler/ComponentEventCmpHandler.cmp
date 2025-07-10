@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="selectedOptionValue" type="string"/>
+    <c:ComponentEventCmp appEvent="{!c.showselectValue}"/>
+    <br/>
+     <br/>
+     <br/>
+     <br/>
+    <div>
+    <b>selected Value:{!v.selectedOptionValue}</b>
+    </div>
+    
+</aura:component>

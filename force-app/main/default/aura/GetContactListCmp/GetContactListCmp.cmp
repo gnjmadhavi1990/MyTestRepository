@@ -1,0 +1,24 @@
+<aura:component controller="GetContactClass" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="con" type="Contact"/>
+    <aura:attribute name="recordid" type="Id"/>
+    <aura:attribute name="acclist" type="Account[]"/>
+    <aura:attribute name="acc" type="Account"/>
+    <aura:attribute name="Columns" type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+    
+        <force:recordData aura:id="AccounRecord"
+                      recordId="{!v.recordid}"
+                      targetFields="{!v.acc}"
+                      layoutType="full"/>
+    <lightning:card iconName="standard:contact"
+                    title="{!'Contact List of' + v.Account.Name}">
+        <lightning:dataTable data="{!v.con}"
+                             keyField="Id"
+                             Columns="[!v.Columns}"
+                             hideCheckboxColumn="false"/>
+        
+    </lightning:card>
+
+        
+	
+</aura:component>

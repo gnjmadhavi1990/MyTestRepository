@@ -1,0 +1,75 @@
+<aura:component controller ="CreateRecords">
+    <aura:attribute name="ContactObj" type="Contact" default="{'sobjectType':'Contact',
+                                                            'FirstName':'',
+                                                            'LastName':'',
+                                                            'Phone':''}"/>
+    <aura:attribute name="contactId" type="string"/>
+    <aura:attribute name="conList" type="Contact[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:input label="First Name"  value="{!v.ContactObj.FirstName}" />
+    <lightning:input label="Last Name" value="{!v.ContactObj.LastName}"/>
+    <lightning:input label="Phone" value="{!v.ContactObj.Phone}"/>
+    <lightning:button variant="brand" label="Save" onclick="{!c.doSave}" title="Save"/>
+      <div>
+    Contact Id: {!v.contactId}</div>
+    
+    <aura:iteration items="{!v.conList}" var="conObj">
+        <table>
+           
+                <thead>
+                <tr>
+                    <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="First Name">
+                        </div>
+                    
+                    </th>
+                    <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Last Name">
+                        </div>
+                        
+                    </th>
+                     <th class="slds-text-title_caps" scope="col">
+                    <div class="slds-truncate" title="Phone">
+                        </div>
+                        
+                    </th>
+                    
+                    
+                    </tr>
+                
+                
+                
+                
+                </thead>
+             <tbody>
+    <tr>
+        <td data-label="First Name" scope="Row">
+        <div class="slds-truncate" title="FirstName"> {!conObj.FirstName}</div>
+        
+        
+        </td>
+         <td data-label="First Name" scope="Row">
+        <div class="slds-truncate" title="FirstName"> {!conObj.LastName}  </div>
+        
+        
+        </td>
+          <td data-label="First Name" scope="Row">
+        <div class="slds-truncate" title="FirstName">{!conObj.Phone}  </div>
+        
+        
+        </td>
+        </tr>
+                </tbody>
+    </table>
+            
+       
+        
+       
+    </aura:iteration>
+    
+    
+  
+    
+    
+	
+</aura:component>

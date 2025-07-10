@@ -1,0 +1,28 @@
+<aura:component controller="AddTwoNumClass" >
+    <aura:attribute name="firstnumber" type="decimal"/>
+    <aura:attribute name="secondnumber" type="decimal"/>
+    <aura:attribute name="res" type="decimal"/>
+    <br/>
+    <div><b>Addition Two Numers:</b> </div>
+    
+    <br/>
+	<div>
+        <ui:inputNumber label="FirstNumber : " aura:id="fnum" value="{!v.firstnumber}"/>
+        
+    </div>
+    <br/>
+    <div>
+        <ui:inputNumber label="SecondNumber : " aura:id="snum" value="{!v.secondnumber}"/>
+        
+    </div>
+    <br/>
+    <div>
+        <ui:inputNumber label="Result : " aura:id="result" value="{!v.res}"/>
+    </div>
+    <br/>
+    
+    <div>
+        <ui:button label="Click Me" press="{!c.Addition}" class="button"/>   
+    </div>
+    
+</aura:component>

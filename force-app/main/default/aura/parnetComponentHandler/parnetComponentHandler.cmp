@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="messageFromEvent" type ="String"/>
+    <aura:handler name="cmpEvent" event="c:myComponentEvent" action="{!c.handlerComponent}"/>
+    <c:childNofity/>
+        <p>{!v.messageFromEvent}</p>
+
+</aura:component>

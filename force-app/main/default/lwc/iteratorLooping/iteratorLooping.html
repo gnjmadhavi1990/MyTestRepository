@@ -1,0 +1,36 @@
+<template>
+    <lightning-card>
+        <table class="slds-table slds-table_bordered">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Title</td>
+                </tr>
+
+            </thead>
+      
+        <template iterator:emp={contactList}>
+            <tr key={emp.value.Id}>
+<td>{emp.value.Name}</td>
+<td>{emp.value.Title}</td>
+            </tr>
+        </template>
+        <template iterator:emp={contactList}>
+
+            <template if:true={emp.first}>
+            <tr key={emp.value.Id}>
+<td>{emp.value.Name}</td>
+<td>{emp.value.Title}</td>
+            </tr>
+        </template>
+        <template if:true={emp.last}>
+            <tr key={emp.value.Id}>
+<td>{emp.value.Name}</td>
+<td>{emp.value.Title}</td>
+            </tr>
+        </template>
+        
+        </template>
+    </table>
+    </lightning-card>
+</template>

@@ -1,0 +1,34 @@
+<apex:page standardController="Contact" extensions="ContactList" renderAs="pdf">
+    <apex:form >
+      <!---  <apex:pageMessages />
+ <div>
+     
+       
+        <apex:inputField value="{!Contact.AccountId}"/><br/><br/>
+         </div><div>
+        
+        
+        <apex:inputField required="true" value="{!Contact.LastName}"/><br/><br/>
+        </div><div>
+        
+        
+        <apex:inputField value="{!Contact.FirstName}"/><br/><br/>
+     </div><div>
+        
+                <apex:commandButton value="Create/Edit" action="{!Save}"/>
+        </div> -->
+       <!-- <apex:outputLink value="{!URLFOR($Action.Contact.View,Contact.AccountId)}">AccountLink</apex:outputLink>-->
+<apex:pageBlock >
+        <apex:pageBlockTable value="{!contactList}" var="con">
+            <apex:column value="{!con.FirstName}"/>
+            <apex:column value="{!con.LastName}"/>
+            <apex:column value="{!con.AccountId}"/>
+            <apex:column value="{!con.Id}"/>
+    </apex:pageBlockTable>
+        
+        </apex:pageBlock>
+        
+        
+    </apex:form>
+   
+</apex:page>

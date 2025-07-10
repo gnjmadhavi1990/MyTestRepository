@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,lightning:isUrlAddressable" access="global">
+<aura:attribute type="string" name="Id"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <div> I am Coming from LWC Navigation state:{!v.Id}</div>
+   
+</aura:component>

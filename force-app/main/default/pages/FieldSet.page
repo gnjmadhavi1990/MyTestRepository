@@ -1,0 +1,20 @@
+<apex:page standardController="Contact" recordSetVar="conList">
+    <apex:form >
+        <apex:pageBlock >
+        <!--apex:pageBlockTable value="{!selected}" var="con">
+            <apex:column value="{!con.FirstName}"/>
+            <apex:column value="{!con.LastName}"/>
+            <apex:column value="{!con.Phone}"/>
+            
+            </apex:pageBlockTable--->
+            <apex:pageBlocktable value="{!selected}" var="con">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.ContactRecordFieldSet}" var="field">
+                    <apex:column headerValue="{!field.Label}" value="{!con[field]}"/>
+                    
+                </apex:repeat>
+            
+            
+            </apex:pageBlocktable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="childValue" type="String"/>
+    <h1>hello all, i am child component and send parent value : {!v.childValue}</h1>
+</aura:component>

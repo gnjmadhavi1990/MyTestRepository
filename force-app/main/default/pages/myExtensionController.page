@@ -1,0 +1,13 @@
+<apex:page standardController="Account" extensions="MyExtensionControllerClass">
+    {!greeting}<p/>
+    <apex:form >
+        <apex:pageBlock title="Account">
+            <apex:inputField value="{!account.Name}"/><p/>
+            <apex:commandButton value="save" action="{!save}"/>
+                
+            
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="valueFromChild" type="string"/>
+    <p>Parent Component:</p>
+    <br/>value from Child :{!v.valueFromChild}<br/>
+    <c:ChildComponentExample1 aura:id="msg" parentValue="{!c.methodParent}"/>
+</aura:component>

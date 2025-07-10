@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Add Two Numbers">
+        <lightning-input name=" number1" class = "no1" type="number" label ="Enter Number1" onchange={handleNumber1}></lightning-input>
+<lightning-input name = "number2" class ="no2" type ="number" label="Enter Number2" onchange={handleNumber2}></lightning-input>
+    <br><lightning-button variant="brand" label="Submit" onclick={addTwoNumbers}>
+    </lightning-button><br>
+    <lightning-formatted-number value={result}></lightning-formatted-number>
+</lightning-card>
+</template>

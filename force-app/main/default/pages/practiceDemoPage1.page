@@ -1,0 +1,17 @@
+<apex:page standardController="employee__c">
+    <apex:pageBlock title="Employee Details">
+    <apex:pageBlockSection title="Employee personal info" columns="1" collapsible="false">
+        <apex:outputField value="{!employee__c.Name}"/>
+        <apex:outputField value="{!employee__c.phone_number__c}"/>
+        
+        
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Employee Office info" columns="1">
+            <apex:outputField value="{!employee__c.OwnerId}"/>
+            <apex:outputField value="{!employee__c.No_of_companies__c}"/>
+            
+            
+        
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

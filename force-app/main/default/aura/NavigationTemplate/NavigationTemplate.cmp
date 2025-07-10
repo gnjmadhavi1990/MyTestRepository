@@ -1,0 +1,6 @@
+<aura:component implements="force:appHostable" >
+    <lightning:card>
+    Lightning Template
+    </lightning:card>
+	
+</aura:component>

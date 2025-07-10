@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="ContactInformation" icon-name="custom:custom14">
+       
+         <table class="slds-table slds-table_bordered">
+            <thead>
+               <tr>
+                  <td>Name</td>
+                  <td>Title</td>
+               </tr>
+            </thead>
+           <template for:each={contacts} for:item="contact">
+              
+               <tr key={contact.Id}>
+                  <td>{contact.Name}</td>
+                  <td>{contact.Title}</td>
+               </tr>
+                
+                 
+              
+           </template>
+         </table>
+      
+     </lightning-card>
+</template>

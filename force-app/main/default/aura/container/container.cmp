@@ -1,0 +1,4 @@
+<aura:component >
+    <c:ApplicationNotifier/>
+    <c:ApplicationHandler/>
+</aura:component>

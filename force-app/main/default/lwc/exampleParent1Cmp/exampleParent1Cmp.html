@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Parent Component" icon-name="custom:custom14">
+        <button class="slds-button slds-button_success" onclick={showHandler}>Open Modal</button>
+        
+        <template if:true={showModal}>
+        <c-example-child-1-cmp 
+    header-text="Message" body-text="this is child component triggered from parent component if close it will go to parent handler"
+     onclose={modalCloseHandler}>
+</c-example-child-1-cmp>
+    </template>
+    </lightning-card>
+</template>

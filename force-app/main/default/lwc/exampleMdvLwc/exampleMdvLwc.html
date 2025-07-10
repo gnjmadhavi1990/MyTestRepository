@@ -1,0 +1,10 @@
+<template>
+    <template lwc:if={contact}>
+        <img src={contact.Picture} alt="'Profile Photo">
+        <p>{contact.Name}</p>
+        <p>{contact.Title}</p>
+    </template>
+    <template lwc:else>
+        <p>No contact details available</p>
+    </template>
+</template>

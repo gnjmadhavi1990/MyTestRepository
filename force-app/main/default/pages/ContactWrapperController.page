@@ -1,0 +1,21 @@
+<apex:page controller="ContactWrapperClass" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!contactWrapperList}" var="con">
+            <apex:column headerValue="select">
+                <apex:inputCheckbox value="{!con.isChecked}"/>
+            </apex:column>
+            <apex:column headerValue="LastName" value="{!con.contactLastName}"/>
+            <apex:column headerValue="FirstName" value="{!con.contactFirstName}"/>
+        </apex:pageBlockTable>
+        <apex:pageBlockButtons location="Top">
+            <apex:commandButton value="Select" action="{!displaySelectedRecords}" rerender="selectValues"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!selectedRecordsList}" var="conObj" Id="selectValues" >
+            <apex:column headerValue="LastName" value="{!conObj.contactLastName}"/>
+            <apex:column headerValue="FirstName" value="{!conObj.contactFirstName}"/>
+        </apex:pageBlockTable>        
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

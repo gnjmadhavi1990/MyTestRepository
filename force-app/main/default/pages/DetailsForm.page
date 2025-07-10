@@ -1,0 +1,38 @@
+<apex:page >
+    <apex:form title="Details Form"><br/>
+        
+    <apex:pageBlock title="Fill the below Details"><br/><br/>
+      Are you currently Employeed?:<apex:inputCheckbox Id="Emp"/><br/><br/>
+       <apex:panelBar >
+            <apex:panelBarItem label="Basic Details" onenter="alert('Entering Basic Details');">        
+                Enter Name:<apex:inputText Id="name"/><br/><br/>
+                  Enter Age <apex:inputText Id="Age"/><br/><br/>
+        </apex:panelBarItem>
+            <apex:panelBarItem label="User Details" onenter="alert('Entering User Details');" onleave="alert('Leaving Basic Details');">
+            Enter a Password: <apex:inputSecret Id="password"/><br/><br/>
+            Set a UserName:<apex:inputText Id="userName"/><br/><br/>
+        </apex:panelBarItem>
+            <apex:panelBarItem label="Letter" onenter="alert('Entering Letter');" onleave="alert('Leaving User Details');">
+                CoverLetter:<apex:inputTextarea Id="coverLetter"/><br/><br/>
+           </apex:panelBarItem>
+        </apex:panelBar>
+        
+        
+        <apex:commandButton Value="Save"/>
+    </apex:pageBlock>
+         <apex:outputLink value="https://in.thedollarbusiness.com/">dollarbusiness</apex:outputLink>
+        
+        <apex:tabPanel switchType="Client" Id="TabPanel" selectedTab="name1">
+            <apex:tab label="name" name="name1" id="tabName">Name</apex:tab>
+            <apex:tab label="Phone" name="phone1" id="tabPhone">Phone</apex:tab>
+        </apex:tabPanel>
+        <apex:panelGrid columns="2" id="thegrid" border="2">
+            <apex:outputText value="first" id="thefirst"/>
+            <apex:outputText value="second" id="thesecond"/>
+            <apex:panelGroup id="thegroup">
+                <apex:outputText value="third" id="theThird"/>
+                <apex:outputText value="four" id="thefour"/>
+            </apex:panelGroup>
+        </apex:panelGrid>
+     </apex:form>
+</apex:page>

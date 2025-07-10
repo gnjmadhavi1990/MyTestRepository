@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 <lightning:card  title="My Aura">
+         
+<div class="slds-m-left_large">    <h1>Hello all, This is my FirstAura Component.
+    </h1>
+</div>
+    </lightning:card>
+</aura:component>

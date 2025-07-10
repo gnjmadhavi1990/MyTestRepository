@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="Lightning"/>
+    <script>
+    $Lightning.use("c:AppToVF",function(){
+    $Lightning.createComponent("c:contactList",{},"Lightning",function(cmp){
+    });
+    
+    });
+    
+    
+    </script>
+    
+</apex:page>

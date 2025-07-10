@@ -1,0 +1,4 @@
+<aura:component >
+    <c:CmpEventNotifier/>
+    <c:CmpEventHandler/>
+</aura:component>

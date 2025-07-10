@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="dateValue" type="string"/>
+    <p>{!v.dateValue}</p>
+    <lightning:button name="clickme" label="clickme" onclick="{!c.onclick}"/>
+</aura:component>

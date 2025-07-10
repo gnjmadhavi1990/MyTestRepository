@@ -1,0 +1,22 @@
+<apex:page controller="practiceDemoPageExtensions" >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection title="Account Name">
+            <apex:inputText value="{!searchText}">
+                
+            
+            </apex:inputText>
+           <apex:pageBlockSection >
+               <apex:pageBlockTable value="{!accList}" var="a" id="aTable">
+                   <apex:column value="{!a.Name}"/>
+                   <apex:column value="{!a.Id}"/>
+                   <apex:column value="{!a.Rating}"/>
+                   
+               
+               </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        <apex:commandButton action="{!search}" value="list of Accounts" reRender="aTable"/>
+        </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

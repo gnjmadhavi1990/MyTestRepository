@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="parentValue" type="String"/>
+    <h1>Hello, I am parent value</h1>
+    <div class="row">
+    <lightning:button label="send the value to child"  iconName="utility:comments" type="Submit" iconPosition="left" variant="brand"  onclick="{!c.sendValue}"/>
+    </div>
+    <br>
+    </br>
+    <c:childComponent childValue ="{!v.parentValue}"/>
+</aura:component>

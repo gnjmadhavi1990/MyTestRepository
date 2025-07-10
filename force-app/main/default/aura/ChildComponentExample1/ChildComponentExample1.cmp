@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="parentValue" type="Aura.Action"/>
+    <aura:attribute name="valueFromParent" type="string" default="Value from Parent Cmp"/>
+    <p>Child Component:</p>
+    <ui:button label="msg" press="{!v.parentValue}"/>
+</aura:component>

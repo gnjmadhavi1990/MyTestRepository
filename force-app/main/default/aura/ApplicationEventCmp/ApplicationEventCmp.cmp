@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="title" type="string"/>
+    <aura:attribute name="fnumber" type="integer"/>
+    <aura:attribute name="snumber" type="integer"/>
+    <aura:attribute name="result" type="integer"/>
+    <aura:registerEvent name="appEvent" type="c:NewApplicationEvent"/>
+    <lightning:card>
+    <aura:set attribute="title">
+        <lightning:icon iconName="utility:connected_apps" size="small"/>
+        {!v.title}
+        </aura:set>
+        <aura:set attribute="footer">
+            <lightning:button variant="brand" label="Sum" onclick="{!c.handleButton}"/>
+            <div>
+                <lightning:input name="firstNumber" label="First Number" value="{!v.fnumber}"/>
+                <lightning:input name="secondNumber" label="Second Number" value="{!v.snumber}"/>
+            </div>
+        
+        </aura:set>
+    </lightning:card>
+	
+</aura:component>

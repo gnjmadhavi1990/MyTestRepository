@@ -1,0 +1,15 @@
+<apex:page controller="customcontrollarapexclass">
+    <apex:form >
+    <apex:pageblock title="Display Account">
+        <apex:pageblocksection title="account" >
+        <apex:outputlabel > Enter account Id:
+            </apex:outputlabel>
+            <apex:inputtext value="{!accid}"/>
+      <apex:commandButton action="{!getacc}" value="enter"/>
+            <apex:outputlabel value="{!accname}"/>
+            
+        </apex:pageblocksection>
+      
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

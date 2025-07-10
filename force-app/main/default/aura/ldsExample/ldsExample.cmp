@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <lightning:recordEditForm recordId= "0035h00000yaYJbAAM" objectApiName="Contact">
+<lightning:messages/>
+        <lightning:outputField fieldName="AccountId"/>
+    <lightning:inputField fieldName="FirstName"/>
+    <lightning:inputField fieldName="LastName"/>
+        <lightning:inputField fieldName="Phone"/>
+        <lightning:button class="slds-m-top_medium" variant="brand" type="Submit" label="Update" name="update"/> 
+                  </lightning:recordEditForm>
+</aura:component>

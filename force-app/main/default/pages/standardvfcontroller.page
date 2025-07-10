@@ -1,0 +1,20 @@
+<apex:page standardController="Contact" >
+    <apex:form >
+    <apex:pageBlock title="my contact section">
+        <!--<apex:pageblockbuttons >
+            <apex:commandbutton Action="{!Save}" value="save" />
+      </apex:pageblockbuttons>-->
+        <apex:pageblocksection title="contact details">
+            <apex:inputfield value="{!Contact.lastname}"/>
+           <apex:inputfield value="{!contact.phone}"/>
+            <apex:inputfield value="{!Contact.Accountid}"/>
+            <apex:inputfield value="{!contact.email}"/>
+        </apex:pageblocksection>
+        <apex:pageblocksection title="Additional details">
+            <apex:inputfield value="{!contact.mailingcountry}"/>
+            <apex:inputfield value="{!contact.mailingstreet}"/>
+             </apex:pageblocksection>
+        <apex:commandbutton Action="{!Save}" value="save" />
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

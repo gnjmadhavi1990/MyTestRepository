@@ -1,0 +1,9 @@
+<aura:component>
+    <aura:attribute name="message" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    <p>Create Dynamic Component</p>
+    <br/>
+    {!v.body}
+    <br/><hr/>
+    {!v.message}
+</aura:component>

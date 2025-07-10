@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+        <lightning:recordEditForm  aura:id="recordEditForm"
+                                  objectApiName="Contact">
+        <lightning:inputField fieldName="Name"/>
+        <lightning:button class="slds-m-top_small" type="submit" label="Create New" />
+</lightning:recordEditForm>
+</aura:component>

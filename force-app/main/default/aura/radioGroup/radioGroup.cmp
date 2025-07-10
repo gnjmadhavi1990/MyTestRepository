@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name ="options" type = "list" default ="[{'label': 'Sum','value':'Option1'},{'label':'Sub','value':'Option2'},{'label':'Mul','value':'Option3'},{'label':'Div','value':'Option4'}]"/>
+    <aura:attribute name ="value" type= "string" default ="Option1"/>
+    <lightning:input type= "number" name="Num1" aura:id="num1" label="enter number1"/>
+    <lightning:input type ="number" name ="Num2" aura:id ="num2" label= "enter number2"/>
+    <lightning:radioGroup name="radioGroup"
+                          aura:id ="radiogrp"
+                          label="Calculate"
+                          options="{! v.options }"
+                          value="{! v.value }"
+                          type="radio"/>
+
+    <lightning:button variant="brand" label="Submit" onclick="{! c.handleClick }" />
+    <lightning:input type="number" name ="result" aura:id="res" label="result" readonly="true"/>
+    
+</aura:component>

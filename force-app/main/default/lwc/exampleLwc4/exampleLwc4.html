@@ -1,0 +1,13 @@
+<template>
+    <div class="slds-m-around-medium">
+        <lightning-card title="Conditional Rendering" icon-name="custom:custom14">
+            <lightning-input type="checkbox" label="Show Details" onchange={handleChange}>
+                
+            </lightning-input>
+            <template lwc:if={areDetails}>
+                <div class="slds-m-around-medium">these are the details</div>
+            </template>
+        </lightning-card>
+    </div>
+    
+</template>

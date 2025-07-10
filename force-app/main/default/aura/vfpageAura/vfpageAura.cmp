@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="vfHost" type="string" default="ganjicom-dev-ed--c.develop.vf.force.com"/>
+    <iframe aura:id="vf page Aura"
+                 src="{!'https://'+ v.vfHost +'/apex/demoVfpage'}"
+            height="500"
+            width="500"/>
+</aura:component>

@@ -1,0 +1,31 @@
+<aura:component controller="CalculatorApexController">
+     <aura:attribute name="fnumber" type="decimal"/>
+    <aura:attribute name="snumber" type="decimal"/>
+    <aura:attribute name="Result" type="decimal"/>
+    
+	<div>
+        Calculator Results
+    
+    </div>
+    <div>
+    
+        <ui:inputNumber label= "First Number" aura:id="fnum" value="{!v.fnumber}"/>
+    </div>
+    
+    <div>
+        
+            <ui:inputNumber label="Second Number" aura:id="snum" value="{!v.snumber}"/>
+       
+    </div><br/>
+	<div>
+       
+            <ui:inputNumber label="Result" aura:id="Result" value="{!v.Result}"/>
+            
+        
+    </div><br/>
+    <div>
+    
+        <ui:button label="Click Me" press="{!c.calculator}" class="button"/>
+        
+    </div><br/>
+</aura:component>
